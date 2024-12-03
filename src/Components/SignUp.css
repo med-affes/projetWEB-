@@ -1,0 +1,80 @@
+/* Wrapper to position everything properly */
+.background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* Full screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Background image container */
+.background .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* Ensures the background is behind content */
+}
+
+.background .bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Cover the entire screen */
+}
+
+/* Center content and layer it above the background */
+.signup-container {
+    position: relative;
+    z-index: 1;
+    /* Ensure content appears above the background */
+    background: #F2CC8F;
+    /* Semi-transparent background */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+    /* Shadow for contrast */
+    text-align: left;
+    max-width: 400px;
+    width: 100%;
+    color: #3D4058;
+}
+
+/* Input box styling */
+.signup-container input {
+    display: block;
+    width: 100%;
+    margin: 15px 0;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #fff;
+}
+
+.signup-container label {
+    text-align: left;
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Button styling */
+.signup-button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #E07A58;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signup-button:hover {
+    background-color: #81B29A;
+} 

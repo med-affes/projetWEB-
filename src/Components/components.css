@@ -1,0 +1,46 @@
+.App {
+  text-align: center;
+}
+
+.fashion, .food, .paint, .artisan {
+  position: relative;
+  width: 100vw; /* Full width of the viewport */
+  height: 100vh; /* Full height of the viewport */
+  overflow: hidden;
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition for transform and background-color */
+}
+
+.fashion:hover, .food:hover, .paint:hover, .artisan:hover {
+  transform: scale(1.05); /* Scale up the element slightly */
+  background-color: #f0e68c; /* Change background color on hover */
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+.text-overlay { 
+position: absolute; 
+top: 50%; /* Center vertically */ 
+left: 50%; /* Center horizontally */ 
+transform: translate(-50%, -50%); /* Perfect centering */ 
+color: #3D405B; /* Update text color */ 
+font-size: 4rem; /* Increase text size */ 
+font-family: 'Jua', sans-serif; /* Apply the Jua font */ 
+text-align: center; /* Center text alignment */ 
+transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth transition */ 
+} 
+
+.text-overlay:hover { 
+transform: translate(-50%, -50%) scale(1.1) rotate(1deg); /* Scale and slightly rotate on hover */ 
+color: #E07A58; /* Change text color on hover */
+}
+
+/* Add margin-bottom to header for space between Navbar and Carousel */
+.header {
+margin-bottom: 20px;
+}

@@ -1,0 +1,180 @@
+
+
+/* Product view container */
+/* Product view container */
+/* Product view container */
+.product-view {
+    padding: 2%;
+    display: flex;
+    flex-direction: row;
+    /* Align the pizza image and the add-to-basket icon horizontally */
+    justify-content: center;
+    /* Center the content horizontally */
+    align-items: center;
+    /* Align items vertically in the center */
+    gap: 20px;
+    /* Add space between the image and the icon */
+}
+
+/* Product Image Section */
+.product-image-section {
+    position: relative;
+    /* Allow absolute positioning of the add icon */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20%;
+}
+
+/* Product image */
+.product-image {
+    width: 60%;
+    /* Adjust size of the pizza image */
+    max-width: 500px;
+    /* Ensure it doesn’t go beyond this size */
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Add to Basket Icon */
+.ADDTOBASKET {
+    position: absolute;
+    bottom: 50%;
+    /* Adjust the position relative to the pizza image */
+    left: 10%;
+    /* Position icon towards the right of the pizza */
+}
+
+/* Basket Image (The + icon) */
+.basket-image {
+    width: 30px;
+    /* Size of the icon */
+    height: auto;
+}
+
+
+
+
+
+
+/* Right Section: Details */
+.product-details-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+/* Profile Card */
+.profile-card {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding: 15px;
+    background-color: #F4F1DE;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.profile-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #d46b47;
+    margin-bottom: 5px;
+    background-color: #F4F1DE;
+}
+
+.profile-description {
+    font-size: 14px;
+    color: #333;
+    width: 70%;
+}
+
+/* Product Description */
+.product-description {
+    background-color: #F4F1DE;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-description h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #d46b47;
+    margin-bottom: 10px;
+}
+
+.product-description p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.comments-section {
+    margin: 20px 15px;
+    padding: 15px;
+    background-color: #F4F1DE;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.comments-section h3 {
+    font-size: 18px;
+    color: #d46b47;
+    margin-bottom: 10px;
+}
+
+.add-comment {
+    display: flex;
+    gap: 0px;
+    margin-bottom: 15px;
+}
+
+.comment-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.comment-button {
+    background-color: #d46b47;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.comment-button:hover {
+    background-color: #e07a58;
+}
+
+.comments-list {
+    list-style: none;
+    padding: 0;
+}
+
+.comment-item {
+    background-color: #ffe4b8;
+    margin-bottom: 10px;
+    padding: 90px;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
