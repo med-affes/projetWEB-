@@ -20,7 +20,7 @@ const style = {
 
 const Basket: React.FC = () => {
   const navigate = useNavigate();
-  
+
   // Use a custom back navigation function
   const handleGoBackClick = () => {
     navigate(-1); // Navigate back to the previous page
@@ -71,9 +71,9 @@ const Basket: React.FC = () => {
             <img src="/basketicon.png" alt="basket" />
             <h2>Basket</h2>
           </div>
-          <Button 
-            variant="contained" 
-            className="buy-all-button" 
+          <Button
+            variant="contained"
+            className="buy-all-button"
             onClick={handleBuyAllClick}
             sx={{
               backgroundColor: '#E07A58',
@@ -92,9 +92,9 @@ const Basket: React.FC = () => {
               <div className="item-details">
                 <p className="item-price">Price: {item.price}</p>
                 <p className="item-description">{item.description}</p>
-                <Button 
-                  variant="contained" 
-                  className="buy-button" 
+                <Button
+                  variant="contained"
+                  className="buy-button"
                   onClick={handleBuyClick}
                   sx={{
                     backgroundColor: '#E07A58',
@@ -125,7 +125,14 @@ const Basket: React.FC = () => {
           <input
             type="text"
             className="form-control"
-            placeholder="Enter bank account"
+            placeholder="Enter your bank account"
+            value={bankAccount}
+            onChange={(e) => setBankAccount(e.target.value)}
+          />
+          <input
+            type="password"
+            className="form-control"
+            placeholder="Enter your password "
             value={bankAccount}
             onChange={(e) => setBankAccount(e.target.value)}
           />
@@ -165,7 +172,14 @@ const Basket: React.FC = () => {
           <input
             type="text"
             className="form-control"
-            placeholder="Enter bank account"
+            placeholder="Enter your bank account"
+            value={bankAccount}
+            onChange={(e) => setBankAccount(e.target.value)}
+          />
+          <input
+            type="password"
+            className="form-control"
+            placeholder="Enter your password"
             value={bankAccount}
             onChange={(e) => setBankAccount(e.target.value)}
           />

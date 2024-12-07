@@ -1,119 +1,233 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .basket-container {
-    width: 100%;
-    background-color: #F4F1DE;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .cart-header {
-    display: flex;
-    justify-content: space-between; /* Align items on opposite ends */
-    align-items: center; /* Align items vertically */
-    background-color: #F4F1DE;
-    padding: 10px;
-  }
-  
-  .cart {
-    display: flex;
-    align-items: center; /* Align items vertically */
-    gap: 20px; /* Space between the icon and text */
-  }
-  
-  .cart img {
-    height: 24px; /* Adjust the height of the icon */
-    width: auto; /* Maintain aspect ratio */
-  }
-  
-  .basket-container h2 {
-    margin: 0; /* Remove margin */
-    font-size: 24px;
-    font-family: 'Jua', sans-serif;
-    color: #E07A58;
-    line-height: 1.5; /* Ensure line height for proper alignment */
-  }
-  
-  .buy-all-button {
-    background-color: #E07A58;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .buy-all-button:hover {
-    background-color: #f7916f;
-  }
-  
-  .basket-items {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    background-color: #F2CC8F;
-    padding: 20px;
-    border-radius: 8px;
-  }
-  
-  .basket-item {
-    flex: 1 1 calc(50% - 20px);
-    background-color: #f1dfc2;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center; /* Align items side by side */
-    justify-content: space-between;
-    width: 45%; /* Adjust width to fit two items per row */
-    height: 250px; /* Adjust height */
-  }
-  
-  .item-image {
-    width: 140px; /* Increase width */
-    height: 140px; /* Increase height */
-    object-fit: cover;
-    border-radius: 8px;
-  }
-  
-  .item-details {
-    flex: 1;
-    margin-left: 20px; /* Space between image and details */
-    align-items: center; /* Align items vertically */
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
 
-  }
-  
-  .item-price {
-    font-size: 14px; /* Reduce font size */
-    color: #333;
-    margin-bottom: 5px;
-  }
-  
-  .item-description {
-    font-size: 12px; /* Reduce font size */
-    color: #555;
-    margin-bottom: 10px;
-    background-color: #F4F1DE;
-    font-family: 'jua';
-    padding: 10px;
-    border-radius: 8px;
-  }
-  
-  .buy-button {
-    background-color: #E07A58;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .buy-button:hover {
-    background-color: #f7916f;
-  }
-  
+.basket-container {
+  width: 100%;
+  background-color: #F4F1DE;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  /* Align items on opposite ends */
+  align-items: center;
+  /* Align items vertically */
+  background-color: #F4F1DE;
+  padding: 10px;
+}
+
+.cart {
+  display: flex;
+  align-items: center;
+  /* Align items vertically */
+  gap: 20px;
+  /* Space between the icon and text */
+}
+
+.cart img {
+  height: 24px;
+  /* Adjust the height of the icon */
+  width: auto;
+  /* Maintain aspect ratio */
+}
+
+.basket-container h2 {
+  margin: 0;
+  /* Remove margin */
+  font-size: 24px;
+  font-family: 'Jua', sans-serif;
+  color: #E07A58;
+  line-height: 1.5;
+  /* Ensure line height for proper alignment */
+}
+
+.buy-all-button {
+  background-color: #E07A58;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.buy-all-button:hover {
+  background-color: #f7916f;
+}
+
+.basket-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: #F2CC8F;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.basket-item {
+  flex: 1 1 calc(50% - 20px);
+  background-color: #f1dfc2;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  /* Align items side by side */
+  justify-content: space-between;
+  width: 45%;
+  /* Adjust width to fit two items per row */
+  height: 250px;
+  /* Adjust height */
+}
+
+.item-image {
+  width: 140px;
+  /* Increase width */
+  height: 140px;
+  /* Increase height */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.item-details {
+  flex: 1;
+  margin-left: 20px;
+  /* Space between image and details */
+  align-items: center;
+  /* Align items vertically */
+
+}
+
+.item-price {
+  font-size: 14px;
+  /* Reduce font size */
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.item-description {
+  font-size: 12px;
+  /* Reduce font size */
+  color: #555;
+  margin-bottom: 10px;
+  background-color: #F4F1DE;
+  font-family: 'jua';
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.buy-button {
+  background-color: #E07A58;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.buy-button:hover {
+  background-color: #f7916f;
+}
+
+/* Modal styling for the "Enter Bank Account" section */
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.modal input.form-control {
+  width: 90%;
+  margin: 10px auto;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #E07A58;
+  border-radius: 4px;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.modal input.form-control:focus {
+  border-color: #E07A58;
+
+  box-shadow: 0 0 5px rgba(224, 122, 88, 0.5);
+}
+
+.modal button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #E07A58;
+  background-color: #E07A58;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal button:hover {
+  background-color: #f7916f;
+}
+
+/* Updated styling for the bank account form in the modal */
+.modal input.form-control {
+  width: 100%;
+  /* Make the input field take full width */
+  margin: 10px 0;
+  /* Add spacing between input fields */
+  padding: 12px;
+  /* Adjust padding for better UX */
+  font-size: 16px;
+  /* Ensure readability */
+  border: 1px solid #E07A58;
+  /* Neutral border */
+  border-radius: 6px;
+  /* Smooth corners */
+  outline: none;
+  /* Remove default outline */
+  box-sizing: border-box;
+  /* Prevent overflow issues */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  /* Add smooth effects */
+}
+
+.modal input.form-control:focus {
+  border-color: #E07A58;
+  /* Highlighted border color */
+  box-shadow: 0 0 6px rgba(224, 122, 88, 0.5);
+  /* Soft glowing effect */
+}
+
+.modal button {
+  width: 100%;
+  /* Make button stretch for consistency */
+  padding: 12px;
+  /* Adjust padding */
+  font-size: 16px;
+  /* Match input font size */
+  color: #E07A58;
+  /* White text for contrast */
+  background-color: #E07A58;
+  /* Consistent brand color */
+  border: none;
+  /* Clean design */
+  border-radius: 6px;
+  /* Match input style */
+  cursor: pointer;
+  /* Indicate action */
+  transition: background-color 0.3s ease;
+  /* Smooth hover effect */
+}
+
+.modal button:hover {
+  background-color: #f7916f;
+  /* Slightly lighter hover color */
+}

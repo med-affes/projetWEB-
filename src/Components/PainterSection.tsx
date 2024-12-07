@@ -6,7 +6,7 @@ const PainterSection: React.FC = () => {
     <div>
       <div className="paint">
         <img src="/painters.jpg" alt="paints" className='background-image' />
-        <div className="text-overlay">Painting</div>
+        <div className="text-overlay">Paintings</div>
       </div>
     </div>
   );

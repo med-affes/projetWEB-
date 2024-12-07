@@ -21,41 +21,52 @@ body {
 
 .profile-header {
   display: flex;
-  flex-direction: row; /* Arrange items in a row */
-  align-items: center; /* Center items vertically */
+  flex-direction: row;
+  /* Arrange items in a row */
+  align-items: center;
+  /* Center items vertically */
   margin-bottom: 20px;
-  gap: 20px; /* Space between the elements */
+  gap: 7px;
+  /* Space between the elements */
 }
 
 .profile-picture {
   border-radius: 50%;
   width: 150px;
   height: 150px;
-  margin-bottom: 10px; /* Add space between the picture and the name */
+  margin-bottom: 30px;
+  /* Add space between the picture and the name */
 }
 
 .profile-info {
   text-align: center;
   display: flex;
-  flex-direction: column; /* Arrange items in a column */
-  align-items: center; /* Center items horizontally */
+  flex-direction: column;
+  /* Arrange items in a column */
+  align-items: center;
+  /* Center items horizontally */
 }
 
 .profile-name {
   margin: 0;
-  font-size: 60px; /* Even bigger font size */
-  background-color: #F2CC8F;
+  font-size: 900px;
+  /* Even bigger font size */
+  background-color: #81B29A;
   font-family: 'Jua', sans-serif;
 }
 
 .profile-description {
-  font-size: 16px;
-  color: #fefefe; /* Updated text color */
-  background-color: #3D405B;
+  font-size: 40px;
+  font-weight: bold;
+  color: #fefefe;
+  /* Updated text color */
+  background-color: #afc8bc;
   text-align: center;
   padding: 10px;
   margin-top: 20px;
   width: 40%;
+  font-family: 'Indie Flower', cursive;
+
 }
 
 .icons {
@@ -72,22 +83,29 @@ body {
 
 .products-section {
   margin-top: 30px;
+
 }
 
 .products-section h1 {
-  margin-bottom: 20px;
+  margin-bottom: px;
   text-align: center;
   background-color: #F2CC8F;
   font-family: 'Indie Flower', cursive;
+  height: 50px;
+  color: #3D4058;
+  height: 55px;
+
 }
 
 .products-columns {
   display: flex;
-  justify-content: space-between; /* Split into two columns */
+  justify-content: space-between;
+  /* Split into two columns */
 }
 
 .column {
-  width: 48%; /* Adjust width to fit two columns */
+  width: 48%;
+  /* Adjust width to fit two columns */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -95,9 +113,12 @@ body {
 
 .category {
   margin-bottom: 30px;
-  border: 2px solid #F2CC8F; /* Add border color */
-  padding: 10px; /* Add padding to separate content from the border */
-  flex-grow: 1; /* Ensure equal height for alignment */
+  border: 2px solid #F2CC8F;
+  /* Add border color */
+  padding: 10px;
+  /* Add padding to separate content from the border */
+  flex-grow: 1;
+  /* Ensure equal height for alignment */
   border-radius: 5%;
   background-color: #F2CC8F;
 }
@@ -107,14 +128,19 @@ body {
   text-align: left;
   margin-bottom: 10px;
   font-family: 'Indie Flower', cursive;
-  width: 100%; /* Ensure full width for alignment */
+  width: 100%;
+  color: #E07A58;
+  font-weight: bold;
+
+  /* Ensure full width for alignment */
 }
 
 .products-grid {
   display: flex;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  width: 100%; /* Ensure full width for alignment */
+  width: 100%;
+  /* Ensure full width for alignment */
 }
 
 .product-placeholder {

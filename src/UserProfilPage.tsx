@@ -25,6 +25,14 @@ const UserProfilePage: React.FC = () => {
   const handleBasketClick = () => {
     navigate('/basket');
   };
+  const handleLogout = () => {
+    // Clear user session data
+    localStorage.removeItem('authToken'); // Example: Remove auth token from local storage
+    sessionStorage.clear(); // Clear any session data if stored
+
+    // Redirect to the login page
+    navigate('/login');
+  };
 
   const handleAddClick = () => {
     setOpenAddModal(true);
@@ -50,6 +58,7 @@ const UserProfilePage: React.FC = () => {
 
   const renderCategory = (category: string) => {
     return (
+
       <div className="category">
         <h3 className="category-title">{category.charAt(0).toUpperCase() + category.slice(1)}</h3>
         <div className="products-grid">
@@ -95,17 +104,25 @@ const UserProfilePage: React.FC = () => {
           data-bs-content="You have 5 new notifications!"
           data-bs-html="true"
         />
-        <img 
-          src="/basketicon.png" 
-          alt="Cart" 
+        <img
+          src="/basketicon.png"
+          alt="Cart"
           className="icon"
           onClick={handleBasketClick}
         />
-        <img 
-          src="/add.png" 
-          alt="Add" 
-          className="icon" 
+        <img
+          src="/add.png"
+          alt="Add"
+          className="icon"
           onClick={handleAddClick}
+        />
+        <img
+          src="/logout.png"
+          alt="logout"
+          className="icon"
+          data-bs-toggle="popover"
+          data-bs-trigger="hover focus"
+
         />
       </div>
       <div className="products-section">

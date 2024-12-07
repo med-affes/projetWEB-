@@ -12,9 +12,9 @@ const NavBar: React.FC = () => {
         <nav className="navbar">
           <ul>
             <li>
-              <Link to="/search">
-                <img src="/searchicon.png" alt="Search" className="icon" />
-                Search
+              <Link to="/Homing">
+                <img src="/homeic.png" alt="Search" className="icon" />
+                Home
               </Link>
             </li>
             <li>
