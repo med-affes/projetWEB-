@@ -1,18 +1,17 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate from React Router
-import './SignUp.css'; // Import the CSS for styling
+import { useNavigate } from 'react-router-dom';
+import './SignUp.css';
 
 const SignUp: React.FC = () => {
     const navigate = useNavigate();
     const [formData, setFormData] = useState({
-        name: '',
-        address: '',
-        phone: '',
-        email: '',
-        password: ''
+        UserName: '',
+        Address: '',
+        Phone_Number: '',
+        E_mail: '',
+        Password: ''
     });
 
-    // Handle form data changes
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { id, value } = e.target;
         setFormData({
@@ -21,67 +20,94 @@ const SignUp: React.FC = () => {
         });
     };
 
-    // Handle form submission
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         console.log('Form data submitted:', formData);
-        // Add any submit logic here (like calling an API to save the data)
-        navigate('/'); // Navigate to HomePage after form submission
+
+        try {
+            const response = await fetch('http://localhost:3001/api/signups', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+
+            console.log('Response status:', response.status);
+            if (response.ok) {
+                alert('User created successfully!');
+                setFormData({
+                    UserName: '',
+                    Address: '',
+                    Phone_Number: '',
+                    E_mail: '',
+                    Password: ''
+                }); // Reset the form data
+                navigate('/'); // Navigate to HomePage after form submission
+            } else {
+                const errorData = await response.json();
+                console.log('Error data:', errorData);
+                alert('Failed to create user');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('An error occurred while creating the user');
+        }
     };
 
     return (
         <div className="background">
             <div className="bg">
-                <img src="/bgg.jpg" alt="Background" /> {/* Ensure the path to the image is correct */}
+                <img src="/bgg.jpg" alt="Background" />
             </div>
             <form className="signup-container" onSubmit={handleSubmit}>
-                <label htmlFor="name">Name</label>
+                <label htmlFor="UserName">Name</label>
                 <input
                     type="text"
-                    id="name"
+                    id="UserName"
                     placeholder="Enter your name"
                     required
-                    value={formData.name}
+                    value={formData.UserName}
                     onChange={handleInputChange}
                 />
 
-                <label htmlFor="address">Address</label>
+                <label htmlFor="Address">Address</label>
                 <input
                     type="text"
-                    id="address"
+                    id="Address"
                     placeholder="Enter your address"
                     required
-                    value={formData.address}
+                    value={formData.Address}
                     onChange={handleInputChange}
                 />
 
-                <label htmlFor="phone">Phone Number</label>
+                <label htmlFor="Phone_Number">Phone Number</label>
                 <input
                     type="tel"
-                    id="phone"
+                    id="Phone_Number"
                     placeholder="Enter your phone number"
                     required
-                    value={formData.phone}
+                    value={formData.Phone_Number}
                     onChange={handleInputChange}
                 />
 
-                <label htmlFor="email">Email</label>
+                <label htmlFor="E_mail">Email</label>
                 <input
                     type="email"
-                    id="email"
+                    id="E_mail"
                     placeholder="Enter your email"
                     required
-                    value={formData.email}
+                    value={formData.E_mail}
                     onChange={handleInputChange}
                 />
 
-                <label htmlFor="password">Password</label>
+                <label htmlFor="Password">Password</label>
                 <input
                     type="password"
-                    id="password"
+                    id="Password"
                     placeholder="Enter your password"
                     required
-                    value={formData.password}
+                    value={formData.Password}
                     onChange={handleInputChange}
                 />
 
