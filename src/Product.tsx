@@ -31,6 +31,7 @@ const Product: React.FC = () => {
 
       {/* Product details */}
       <div className="product-details">
+        {/* Left Column: Product Description */}
         <div className="product-info">
           <h2 className="product-name">{productName}</h2>
           <p>{productDescription}</p>
@@ -39,13 +40,13 @@ const Product: React.FC = () => {
           <p>Sells: 30</p>
         </div>
 
+        {/* Right Column: Product Image and Buttons */}
         <div className="product-image">
           <img src="pizza.jpg" alt="Pizza" />
-        </div>
-
-        <div className="action-buttons">
-          <button className="modify-button" onClick={handleOpenModal}>Modify</button>
-          <button className="delete-button">delete</button>
+          <div className="action-buttons">
+            <button className="modify-button" onClick={handleOpenModal}>Modify</button>
+            <button className="delete-button">Delete</button>
+          </div>
         </div>
       </div>
 
@@ -64,11 +65,7 @@ const Product: React.FC = () => {
       {/* Reviews section */}
       <div className="reviews-section">
         <div className="review">
-          <img
-            className="user-avatar"
-            src="emnag.jpg"
-            alt="User 1"
-          />
+          <img className="user-avatar" src="emnag.jpg" alt="User 1" />
           <div className="review-content">
             <div className="stars">⭐⭐⭐</div>
             <p>J'ai aimé ce plat</p>
@@ -76,11 +73,7 @@ const Product: React.FC = () => {
         </div>
 
         <div className="review">
-          <img
-            className="user-avatar"
-            src="emnag.jpg"
-            alt="User 2"
-          />
+          <img className="user-avatar" src="emnag.jpg" alt="User 2" />
           <div className="review-content">
             <div className="stars">⭐⭐⭐⭐</div>
             <p>Bravo</p>

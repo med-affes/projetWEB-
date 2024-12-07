@@ -12,29 +12,35 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('/bgg.jpg') no-repeat center center/cover; /* Ensure the path to the image is correct */
-    z-index: -1; /* Send the background image behind the content */
+    background: url('/bgg.jpg') no-repeat center center/cover;
+    /* Ensure the path to the image is correct */
+    z-index: -1;
+    /* Send the background image behind the content */
 }
 
 .content {
     position: relative;
-    z-index: 1; /* Bring the content above the background image */
-    gap:20% ;
+    z-index: 1;
+    /* Bring the content above the background image */
+    gap: 60%;
 }
-h2{
-color: #3D4058;
+
+h2 {
+    color: #3D4058;
 }
+
 .login-container {
-    background-color: #F2CC8F; /* Slightly transparent background */
+    background-color: #F2CC8F;
+    /* Slightly transparent background */
     padding: 20px;
     border-radius: 8px;
     width: 500px;
     height: 400px;
     margin: 100px auto;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    
 
-    
+
+
 }
 
 .input-box {
@@ -45,6 +51,8 @@ color: #3D4058;
 
 .input-box .icon {
     margin-right: 10px;
+    margin-bottom: 2%;
+    font-size: 22px;
 }
 
 input[type="email"],
@@ -64,20 +72,22 @@ input[type="password"] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 20px;
+    margin-top: 5%;
 }
 
 .login-button:hover {
-    background-color: #fb8e6a;
+    background-color: #81B29A;
 }
 
 .signup-text {
-    margin-top: 10px;
+    margin-top: 15px;
     text-align: center;
     color: #3D4058;
 }
 
 .signup-link {
-    color:#81B29A;
-    
+    color: #81B29A;
+    font-size: 16px;
+
 }

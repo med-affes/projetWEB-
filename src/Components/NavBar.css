@@ -2,44 +2,58 @@
 .navbar-header {
   width: 100%;
   display: flex;
-  justify-content: center;  /* Center horizontally */
-  align-items: center;      /* Center vertically */
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
   background-color: #F4F1DE;
-  padding: 20px; /* Increase padding to make the navbar larger */
+  padding: 20px;
+  /* Increase padding to make the navbar larger */
 }
 
 /* Logo styling */
 .logo {
-  width: 250px;  /* Increase logo size */
-  height: 100px;  /* Keep aspect ratio */
+  width: 250px;
+  /* Increase logo size */
+  height: 100px;
+  /* Keep aspect ratio */
   position: relative;
-  transition: transform 0.3s ease-in-out; /* Smooth transition for popping up effect */
+  transition: transform 0.3s ease-in-out;
+  /* Smooth transition for popping up effect */
 }
 
-.logo:hover { 
-  animation: popUp 3s forwards; /* Apply pop-up animation on hover, even slower */
+.logo:hover {
+  animation: popUp 3s forwards;
+  /* Apply pop-up animation on hover, even slower */
 }
 
 @keyframes popUp {
-  from { 
-    transform: translateY(20px); /* Start position below */
-    opacity: 0; /* Start invisible */
+  from {
+    transform: translateY(20px);
+    /* Start position below */
+    opacity: 0;
+    /* Start invisible */
   }
-  to { 
-    transform: translateY(0); /* End position at normal */
-    opacity: 1; /* End fully visible */
+
+  to {
+    transform: translateY(0);
+    /* End position at normal */
+    opacity: 1;
+    /* End fully visible */
   }
 }
 
 .header {
   background-color: #F4F1DE;
-  height: 200px; /* Increase height of the header */
+  height: 200px;
+  /* Increase height of the header */
 }
 
 nav {
   display: flex;
   background-color: #F4F1DE;
-  padding: 20px; /* Increase padding for larger navbar */
+  padding: 20px;
+  /* Increase padding for larger navbar */
 }
 
 nav ul {
@@ -54,30 +68,43 @@ nav ul {
 
 nav ul li {
   display: inline;
-  margin: 0 20px; /* Increase margin for spacing out the links */
-  
+  margin: 0 20px;
+  font-weight: bold;
+
+  /* Increase margin for spacing out the links */
+
 }
 
 nav ul li a {
   color: #E07A58;
   text-decoration: none;
-  padding: 15px 30px; /* Increase padding for larger links */
-  display: flex; /* Use flexbox for centering */
-  align-items: center; /* Center items vertically */
+  padding: 15px 30px;
+  /* Increase padding for larger links */
+  display: flex;
+  /* Use flexbox for centering */
+  align-items: center;
+  /* Center items vertically */
   background-color: #F4F1DE;
   border-radius: 20px;
-  font-size: 20px; /* Increase font size */
+  font-size: 20px;
+  /* Increase font size */
 }
 
 nav ul li a:hover {
-  color: #f7916f; /* Change text color on hover */
-  background-color: #d2d0c3;
+  color: #81B29A;
+  /* Change text color on hover */
+  background-color: #f0dbb9;
   text-decoration: none;
+
+
 
 }
 
-nav ul li a .icon { 
-  margin-right: 12px; /* Increase space between icon and text */ 
-  width: 30px; /* Increase icon size */ 
-  height: auto; /* Maintain aspect ratio */
+nav ul li a .icon {
+  margin-right: 12px;
+  /* Increase space between icon and text */
+  width: 20px;
+  /* Increase icon size */
+  height: auto;
+  /* Maintain aspect ratio */
 }
