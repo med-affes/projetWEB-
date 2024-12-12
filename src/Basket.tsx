@@ -28,15 +28,16 @@ type BasketItem = {
 
 const Basket: React.FC = () => {
   const navigate = useNavigate();
+
   const [openSingleModal, setOpenSingleModal] = useState(false);
   const [openBuyAllModal, setOpenBuyAllModal] = useState(false);
   const [openDetailsModal, setOpenDetailsModal] = useState(false);
   const [bankAccount, setBankAccount] = useState("");
-  const [bankPassword, setBankPassword] = useState(""); // Add state for bank password
+  const [bankPassword, setBankPassword] = useState("");
   const [items, setItems] = useState<BasketItem[]>([]);
 
   const handleGoBackClick = () => {
-    navigate(-1);
+    navigate(-1); // Navigate back to the previous page
   };
 
   useEffect(() => {
@@ -54,7 +55,7 @@ const Basket: React.FC = () => {
           console.error("Error fetching basket items:", error);
         }
       } else {
-        navigate("/basket");  // Redirect to basket if not authenticated
+        navigate("/basket");
       }
     };
 
@@ -92,7 +93,7 @@ const Basket: React.FC = () => {
         console.error("Error deleting product from basket:", error);
       }
     } else {
-      navigate("/basket");  // Redirect to basket if not authenticated
+      navigate("/basket");
     }
   };
 
@@ -173,7 +174,7 @@ const Basket: React.FC = () => {
           <input
             type="text"
             className="form-control"
-            placeholder="Enter bank account"
+            placeholder="Enter your bank account"
             value={bankAccount}
             onChange={(e) => setBankAccount(e.target.value)}
           />
@@ -190,7 +191,7 @@ const Basket: React.FC = () => {
         </Box>
       </Modal>
 
-      {/* Modals for Buy All */}
+      {/* Modal for Buy All */}
       <Modal open={openBuyAllModal} onClose={() => setOpenBuyAllModal(false)}>
         <Box sx={style}>
           <Typography variant="h6">Confirm Purchase</Typography>
@@ -210,7 +211,7 @@ const Basket: React.FC = () => {
           <input
             type="text"
             className="form-control"
-            placeholder="Enter bank account"
+            placeholder="Enter your bank account"
             value={bankAccount}
             onChange={(e) => setBankAccount(e.target.value)}
           />

@@ -8,17 +8,16 @@ import { Carousel } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import './Components/components.css'; // Import your custom CSS
 
-
 const HomePage: React.FC = () => {
   return (
-    <div>
+    <div className="home-page-container"> {/* Add a wrapper around the whole page */}
       <NavBar />
       <Carousel>
         <Carousel.Item>
-          <FashionSection />
+          <FoodSection />
         </Carousel.Item>
         <Carousel.Item>
-          <FoodSection />
+          <FashionSection />
         </Carousel.Item>
         <Carousel.Item>
           <PainterSection />
@@ -27,7 +26,6 @@ const HomePage: React.FC = () => {
           <ArtisanSection />
         </Carousel.Item>
       </Carousel>
-      
     </div>
   );
 };

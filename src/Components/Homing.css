@@ -1,0 +1,121 @@
+/* Homing.css */
+body {
+    background-color: #F4F1DE;
+    /* Light yellow background for the body */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    /* Make sure the font is consistent */
+}
+
+/* Wrapper for the whole homing page */
+.homing-page {
+    padding-top: 20px;
+    text-align: center;
+    /* Center align the content */
+    background-color: #F4F1DE;
+    /* Background color for the entire page */
+    min-height: 100vh;
+    /* Ensure the content area covers full height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center content horizontally */
+}
+
+/* Navbar Section */
+.navbar-section {
+    width: 100%;
+    background-color: #F4F1DE;
+    /* Background color for the navbar */
+}
+
+/* Content Section for Categories and Products */
+.content-section {
+    width: 100%;
+    max-width: 1400px;
+    /* Maximum width of content section */
+    padding: 20px;
+
+}
+
+/* Add a border and padding to each section */
+.category-section {
+    background-color: #F2CC8F;
+    /* Background color of category section */
+    border-radius: 10px;
+    /* Rounded corners for a soft look */
+    padding: 20px;
+    margin-bottom: 20px;
+    /* Add space between sections */
+    text-align: center;
+    /* Center the text */
+}
+
+/* Styling for category name */
+.category-name {
+    font-size: 30px;
+    font-weight: bold;
+    color: #3D4058;
+    /* Dark text color for category name */
+    margin-bottom: 20px;
+}
+
+/* Styling for products container */
+.products-container {
+    display: flex;
+    justify-content: center;
+    /* Center the items */
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Styling for product cards */
+/* Styling for product cards */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    /* Increase width */
+    height: 300px;
+    /* Increase height */
+    border-radius: 15px;
+    background-color: #f4f1e7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    /* Increase padding to adjust content inside the card */
+    text-align: center;
+    transition: transform 0.3s ease;
+    margin: 15px;
+    /* Adjust margin between cards */
+}
+
+/* Product card hover effect */
+.product-card:hover {
+    transform: scale(1.05);
+    /* Slightly enlarge the card on hover */
+}
+
+/* Styling for product name */
+.product-name {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #E07A58;
+    /* Change color to match your design */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .products-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-card {
+        width: 80%;
+        /* Adjust card width for smaller screens */
+    }
+}

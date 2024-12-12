@@ -11,6 +11,7 @@ import Basket from "./Basket";
 import Signin from "./Components/SignIn";
 import SignUp from "./Components/SignUp";
 import Search from "./Search";
+import Homing from "./Components/Homing";
 import Product from "./Product";
 import ProductView from "./ProductView";
 import OtherProfilePage from "./OtherProfilPage"; // Import the OtherProfilePage component
@@ -28,6 +29,7 @@ const App: React.FC = () => {
         <Route path="/search" element={<Search />} />
         <Route path="/product" element={<Product />} />
         <Route path="/productview" element={<ProductView />} />
+        <Route path="/Homing" element={<Homing />} />
         <Route path="/otherprofile" element={<OtherProfilePage />} />{" "}
         {/* Add the OtherProfilePage route */}
       </Routes>
